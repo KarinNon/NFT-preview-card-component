@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --text-color: hsl(215, 51%, 70%);
+    --font: 'Josefin Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg);
+    margin: 0;
+    display: flex;
+    font-family: var(--font);
+    height: 100vh;
+}
+
+.main {
+    width: 350px;
+    height: 600px;
+    background-color: var(--card-bg);
+    margin: auto;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.image-box {
+    width: 300px;
+    height: 300px;
+    background-color: cyan;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    transition: 0.25s all ease;
+}
+
+.image:hover {
+    opacity: 0.75;
+}
+
+.eye-icon {
+    position: absolute;
+    left: 126px;
+    top: 126px;
+    display: none;
+}
+
+.image:hover + .eye-icon {
+    display: block;
+}
+
+.title {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    font-weight: 600;
+    transition: 0.25s all ease;
+}
+
+.title:hover {
+    color: cyan;
+    cursor: pointer;
+}
+
+.desc {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 25px;
+    margin-top: 0;
+}
+
+.detail {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.detail-inner {
+    width: 60%;
+    height: 100%;
+    display: flex;
+}
+
+.detail-inner p {
+    margin: 2.5px;
+    margin-left: 10px;
+    font-size: 600;
+    color: cyan;
+    font-size: 1rem;
+}
+
+.right {
+    width: 40%;
+}
+
+.right p {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    margin-inline: auto;
+    margin-block: 20px;
+    background-color: var(--line-color);
+}
+
+.profile {
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+
+.profile img {
+    outline: 1px solid white;
+    border-radius: 100px;
+}
+
+.profile p {
+    color: var(--text-color);
+    margin-inline: 15px;
+    margin-block: 7.5px;
+    font-weight: 400;
+}
+
+.profile p span {
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.profile p span:hover {
+    color: cyan;
+}
